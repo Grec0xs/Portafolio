@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi portafolio</title>
+<meta name="description" content="Portafolio de ingeniería, programación, música y edición.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Sans+Condensed:wght@400;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="nav" aria-label="Principal">
+  <a href="#inicio" class="logo" id="logo">★</a>
+  <a href="#sobre-mi">Sobre mí</a><a href="#proyectos">Proyectos</a><a href="#vinilos">Vinilos</a><a href="#contacto">Contacto</a>
+</nav>
+
+<header id="inicio" class="hero">
+  <h1 id="nombre" class="big"></h1>
+  <p id="rol" class="role"></p>
+  <div id="play" class="play" aria-label="Intereses flotando. Arrástralos con el mouse."></div>
+  <button id="boom" class="btn">¡Otra explosión!</button>
+</header>
+
+<section id="sobre-mi" class="sec about">
+  <h2 class="big">Sobre mí</h2>
+  <div class="about-grid">
+    <div class="note"><p id="bio"></p><p class="hand" id="lema"></p></div>
+    <div class="ficha" id="ficha"></div>
+    <div class="stickers" id="stickers"></div>
+  </div>
+</section>
+
+<section id="proyectos" class="sec projects">
+  <h2 class="big">Proyectos</h2>
+  <div class="chips" id="chips" role="group" aria-label="Filtrar proyectos"></div>
+  <div class="board" id="board"></div>
+</section>
+
+<section id="vinilos" class="sec vinyl">
+  <h2 class="big">La caja de vinilos</h2>
+  <p class="sub">Lo que hice, lo que me gusta y lo que te recomiendo. Elige un disco.</p>
+  <div class="chips" id="vtabs" role="group" aria-label="Categorías de discos"></div>
+  <div class="crate" id="crate"></div>
+  <div class="deck-wrap">
+    <div class="deck"><div class="platter" id="rec"><div class="label" id="lab"></div></div><div class="arm" id="arm"></div></div>
+    <div class="info">
+      <h3 id="vt">Elige un disco</h3><p id="va"></p><p id="vmsg" class="hand"></p>
+      <div class="ctrl"><button class="btn" id="pp" aria-label="Reproducir o pausar">▶</button><input type="range" id="seek" min="0" max="100" value="0" aria-label="Progreso"><a id="vlink" class="btn ghost hidden" target="_blank" rel="noopener">Abrir enlace</a></div>
+    </div>
+  </div>
+</section>
+
+<footer id="contacto" class="sec contact">
+  <h2 class="big">Hablemos</h2>
+  <div class="links" id="links"></div>
+  <p class="hand" id="pie"></p>
+</footer>
+
+<dialog id="dlg" aria-labelledby="dt">
+  <span class="tag" id="dtag"></span><h2 id="dt"></h2><p id="dd"></p><p class="muted" id="dh"></p>
+  <div class="row"><a id="dl" class="btn" target="_blank" rel="noopener">Ver proyecto</a><button class="btn ghost" id="close">Cerrar</button></div>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
